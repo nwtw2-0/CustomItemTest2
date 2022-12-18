@@ -14,6 +14,7 @@ import cn.nukkit.item.customitem.CustomItemDefinition;
 import cn.nukkit.item.customitem.ItemCustomTool;
 import cn.nukkit.item.customitem.data.ItemCreativeCategory;
 import cn.nukkit.plugin.PluginLogger;
+import com.sun.tools.javac.Main;
 
 import java.io.File;
 import java.io.IOException;
