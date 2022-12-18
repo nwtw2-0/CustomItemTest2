@@ -1,6 +1,8 @@
 package cn.powernukkitx.exampleplugin;
 
+import cn.nukkit.Player;
 import cn.nukkit.block.Block;
+import cn.nukkit.blockentity.BlockEntityBrewingStand;
 import cn.nukkit.command.Command;
 import cn.nukkit.command.CommandSender;
 import cn.nukkit.entity.Entity;
@@ -15,12 +17,14 @@ import cn.nukkit.item.customitem.ItemCustomTool;
 import cn.nukkit.item.customitem.data.ItemCreativeCategory;
 import cn.nukkit.plugin.PluginLogger;
 import com.sun.tools.javac.Main;
+import cn.nukkit.Player;
 
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * author: MagicDroidX
@@ -78,6 +82,16 @@ public class ExamplePlugin extends PluginBase {
     @Override
     public void onDisable() {
         this.getLogger().info(TextFormat.DARK_RED + "I've been disabled!");
+    }
+
+    @Override
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
+        switch (cmd.getName().toLowerCase()){
+            case "tsword":
+                Player p;
+                ((Player) sender).getInventory().addItem(Item.fromString("nwtw:test_sword"));
+        }
+        return true;
     }
 
 
